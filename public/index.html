@@ -36,5 +36,192 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="/scripttest.js"></script>
+    <style type="text/css">
+.cookie-manager {
+  
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.cookie-manager .cookie-icon {
+  
+  left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    bottom: 25px;
+    width: 40px;
+    height: 40px;
+  background-image: url("https://image.flaticon.com/icons/svg/141/141573.svg");
+  transition: bottom 0.5s ease-in-out, left 0.2s ease-in-out;
+  z-index: 1002;
+}
+
+.cookie-manager .cookie-icon.hidden {
+  
+  bottom: -40px;
+}
+
+.cookie-manager .cookie-tooltip {
+  
+  width: 70%;
+    position: absolute;
+    bottom: 85px;
+    transition: opacity 0.2s ease-in-out, height 0.1s;
+    background-color: white;
+    border-radius: 3px;
+    left: 15%;
+    box-shadow: 0px 0px 10px 0px rgba(112,97,58,0.75);
+    box-sizing: border-box;
+    padding: 6px 9px;
+    color: rgb(112,97,58);
+    text-align: center;
+    z-index: 1001;
+}
+
+.cookie-manager .cookie-tooltip::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -1px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.cookie-manager .cookie-tooltip.hidden {
+  
+  opacity: 0;
+}
+
+.cookie-manager .cookie-tooltip h3 {
+  
+  font-size: 1.1rem;
+}
+
+.cookie-manager .cookie-tooltip p {
+  
+  font-size: 0.8em;
+}
+
+.cookie-manager .cookie-tooltip b {
+  
+  display: block;
+}
+
+.cookie-manager .cookie-selector {
+  
+  position: fixed;
+    bottom: 0;
+    height: 200px;
+    width: 130%;
+    margin-left: -15%;
+    margin-bottom: -100px;
+    border-radius: 50%;
+  background-color: #eae0c8;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.cookie-manager .cookie-selector.hidden {
+
+  opacity: 0; 
+}
+
+.cookie-manager .cookie-selector .cookie-select {
+  
+  width: 50%;
+  display: inline-block;
+    height: 0;
+    transition: border-bottom 0.1s ease-in-out;
+}
+
+.cookie-manager .cookie-selector .cookie-select-no {
+  
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #D5BBA2;
+}
+
+.cookie-manager .cookie-selector .cookie-select-no.selected {
+  
+    border-bottom: 200px solid #824515;
+}
+
+.cookie-manager .cookie-selector .cookie-select-no .cookie-select-icon {
+    height: 80px;
+    bottom: 100px;
+    left: calc(40% - 120px);
+    position: absolute;
+    display: block;
+    stroke-width: 4;
+    stroke: #824515;
+    stroke-miterlimit: 10;
+    transition: stroke 0.1s ease-in-out;
+}
+
+.cookie-manager .cookie-selector .cookie-select-no.selected .cookie-select-icon {
+  
+    stroke: white;
+}
+
+.cookie-manager .cookie-selector .cookie-select-ok {
+  
+    border-left: 100px solid transparent;
+    border-bottom: 200px solid #F4FAF0;
+}
+
+.cookie-manager .cookie-selector .cookie-select-ok.selected {
+  
+    border-bottom: 200px solid #A4DE00;
+}
+
+.cookie-manager .cookie-selector .cookie-select-ok .cookie-select-icon {
+    height: 80px;
+    bottom: 100px;
+    left: calc(60% + 40px);
+    position: absolute;
+    display: block;
+    stroke-width: 4;
+    stroke: #a4de00;
+    stroke-miterlimit: 10;
+    transition: stroke 0.1s ease-in-out;
+}
+
+.cookie-manager .cookie-selector .cookie-select-ok.selected .cookie-select-icon {
+  
+    stroke: white;
+}
+
+.cookie-manager .cookie-params {
+  
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFFE0;
+  position: absolute;
+  bottom: -100%;
+  transition: bottom 0.2s ease-in-out;
+}
+
+.cookie-manager .cookie-params .cookie-params-menu {
+  
+  margin-top: 90px;
+    padding: 10px;
+    color: rgb(112,97,58);
+}
+
+.cookie-manager .cookie-params .cookie-params-menu h3 {
+  
+  font-size: 1.25rem;
+}
+  </style>
   </body>
 </html>
